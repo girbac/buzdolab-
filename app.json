@@ -1,0 +1,48 @@
+{
+  "expo": {
+    "name": "Buzdolabı Takip",
+    "slug": "buzdolabi-takip",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "newArchEnabled": true,
+    "splash": {
+      "image": "./assets/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#dfe6ea"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.buzdolabitakip.app",
+      "infoPlist": {
+        "NSCameraUsageDescription": "Dolaba koyduğun ürünün fotoğrafını çekebilmek için kamera erişimi gerekiyor.",
+        "NSPhotoLibraryUsageDescription": "Ürün fotoğrafını galerinden seçebilmek için fotoğraf erişimi gerekiyor."
+      }
+    },
+    "android": {
+      "package": "com.buzdolabitakip.app",
+      "adaptiveIcon": {
+        "backgroundColor": "#dfe6ea",
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "backgroundImage": "./assets/android-icon-background.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png"
+      },
+      "predictiveBackGestureEnabled": false,
+      "permissions": ["CAMERA", "READ_MEDIA_IMAGES", "POST_NOTIFICATIONS", "SCHEDULE_EXACT_ALARM"]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Ürün fotoğrafını galerinden seçebilmek için fotoğraf erişimi gerekiyor.",
+          "cameraPermission": "Dolaba koyduğun ürünün fotoğrafını çekebilmek için kamera erişimi gerekiyor."
+        }
+      ],
+      "expo-notifications"
+    ]
+  }
+}
